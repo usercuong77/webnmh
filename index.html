@@ -3,87 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Mạnh Hiếu | Chuyên Gia Giải Pháp Facebook 8 Năm Kinh Nghiệm</title>
+    <title>Nguyễn Mạnh Hiếu | Chuyên Gia Facebook 8 Năm Kinh Nghiệm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+        
         .gradient-text {
             background: linear-gradient(90deg, #1877F2, #00C6FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero-bg {
             background: radial-gradient(circle at top right, rgba(24, 119, 242, 0.1), transparent),
                         radial-gradient(circle at bottom left, rgba(0, 198, 255, 0.05), transparent);
         }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(24, 119, 242, 0.15);
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-zalo { background-color: #0068FF; }
+        .btn-messenger { background: linear-gradient(135deg, #00B2FF, #006AFF, #A033FF); }
+        .btn-telegram { background-color: #26A5E4; }
+        
+        .contact-link-card {
+            transition: all 0.3s ease;
+        }
+        .contact-link-card:hover {
+            transform: scale(1.05);
+        }
+
+        .hotline-glow {
+            text-shadow: 0 0 20px rgba(24, 119, 242, 0.3);
+        }
+
+        .profile-image-container {
+            position: relative;
+            z-index: 1;
+        }
+        .profile-image-container::after {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 2px solid rgba(24, 119, 242, 0.3);
+            border-radius: 3rem;
+            z-index: -1;
+            transform: rotate(3deg);
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300 border-b border-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center">
-                    <span class="text-2xl font-bold gradient-text uppercase tracking-tighter">Hieu Nguyen.</span>
+                    <span class="text-xl md:text-2xl font-extrabold gradient-text uppercase tracking-tighter">NGUYEN MANH HIEU.</span>
                 </div>
-                <div class="hidden md:flex space-x-8 font-medium">
+                <div class="hidden lg:flex items-center space-x-8 font-medium">
                     <a href="#home" class="hover:text-blue-600 transition">Trang chủ</a>
                     <a href="#services" class="hover:text-blue-600 transition">Dịch vụ</a>
                     <a href="#about" class="hover:text-blue-600 transition">Kinh nghiệm</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Liên hệ ngay</a>
+                    <div class="flex items-center bg-blue-50 px-4 py-2 rounded-full border border-blue-100">
+                        <i data-lucide="phone" class="w-4 h-4 text-blue-600 mr-2"></i>
+                        <span class="text-blue-600 font-bold">098.618.3017</span>
+                    </div>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-200">Kết nối ngay</a>
                 </div>
-                <div class="md:hidden">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
+                <!-- Mobile Call Icon -->
+                <div class="lg:hidden flex items-center">
+                    <a href="tel:0986183017" class="p-2 bg-blue-600 text-white rounded-full mr-4">
+                        <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 hero-bg">
+    <section id="home" class="pt-40 pb-20 hero-bg overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-50 rounded-full">
-                8+ Năm Kinh Nghiệm Thực Chiến
+            <div data-aos="fade-down" class="inline-flex items-center px-4 py-1.5 mb-6 text-sm font-bold tracking-wide text-blue-600 uppercase bg-blue-100 rounded-full border border-blue-200">
+                <i data-lucide="shield-check" class="w-4 h-4 mr-2"></i> 8+ Năm Kinh Nghiệm Thực Chiến
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                Giải Pháp <span class="gradient-text">Facebook Toàn Diện</span> <br>Nâng Tầm Thương Hiệu
+            <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-8xl font-extrabold tracking-tight mb-6 leading-tight">
+                Giải Pháp <span class="gradient-text">Facebook</span> <br>Chuyên Nghiệp
             </h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
-                Chuyên xử lý mọi vấn đề về mạng xã hội: Mở khóa tài khoản, bảo mật, lên tích xanh, tăng tương tác và tối ưu hóa quảng cáo chuyển đổi cao.
+            
+            <div data-aos="zoom-in" data-aos-delay="150" class="mb-10 inline-block bg-white px-8 py-4 rounded-2xl shadow-xl border border-blue-50">
+                <p class="text-slate-500 text-sm font-semibold uppercase tracking-widest mb-1">Hotline Tư Vấn 24/7</p>
+                <a href="tel:0986183017" class="text-3xl md:text-5xl font-black text-blue-600 hover:text-blue-700 transition tracking-tighter">098.618.3017</a>
+            </div>
+
+            <p data-aos="fade-up" data-aos-delay="200" class="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
+                Chuyên xử lý mọi vấn đề: Mở khóa, bảo mật, lên tích xanh, tăng tương tác và tối ưu hóa quảng cáo chuyển đổi cao.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200 flex items-center justify-center">
+            <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
+                <a href="#services" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 transition transform hover:-translate-y-1 shadow-xl shadow-blue-200 flex items-center justify-center">
                     Xem dịch vụ <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
                 </a>
-                <a href="#contact" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center">
-                    Tư vấn miễn phí
+                <a href="http://zalo.me/0986183017" target="_blank" class="px-10 py-5 bg-white text-slate-900 border border-slate-200 rounded-2xl font-bold text-lg hover:bg-slate-50 transition transform hover:-translate-y-1 flex items-center justify-center">
+                    Chat Zalo Ngay
                 </a>
             </div>
             
-            <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 border-t border-slate-200 pt-12">
-                <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-1">8,000+</div>
-                    <div class="text-slate-500">Khách hàng hài lòng</div>
+            <div data-aos="zoom-in" data-aos-delay="400" class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-200 pt-12">
+                <div class="group text-center">
+                    <div class="text-4xl font-black text-slate-900 mb-1 group-hover:text-blue-600 transition">8,000+</div>
+                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Khách hàng</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-1">15k+</div>
-                    <div class="text-slate-500">Tài khoản đã mở khóa</div>
+                <div class="group text-center">
+                    <div class="text-4xl font-black text-slate-900 mb-1 group-hover:text-blue-600 transition">15k+</div>
+                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Tài khoản mở khóa</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-1">500+</div>
-                    <div class="text-slate-500">Chiến dịch Ads thành công</div>
+                <div class="group text-center">
+                    <div class="text-4xl font-black text-slate-900 mb-1 group-hover:text-blue-600 transition">500+</div>
+                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Chiến dịch Ads</div>
                 </div>
-                <div>
-                    <div class="text-4xl font-bold text-slate-900 mb-1">08</div>
-                    <div class="text-slate-500">Năm kinh nghiệm</div>
+                <div class="group text-center">
+                    <div class="text-4xl font-black text-slate-900 mb-1 group-hover:text-blue-600 transition">08</div>
+                    <div class="text-slate-500 text-sm font-medium uppercase tracking-wider">Năm kinh nghiệm</div>
                 </div>
             </div>
         </div>
@@ -92,163 +157,169 @@
     <!-- Services Section -->
     <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Dịch Vụ Chuyên Nghiệp</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">Chúng tôi cung cấp các giải pháp kỹ thuật cao giúp bạn duy trì và phát triển sự hiện diện trên Facebook một cách an toàn nhất.</p>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Dịch Vụ Chuyên Nghiệp</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto text-lg">Giải pháp kỹ thuật chuẩn quốc tế cho mọi vấn đề Facebook.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                <div class="service-card p-10 rounded-3xl border border-slate-100 bg-slate-50" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
                         <i data-lucide="unlock" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Mở Khóa Tài Khoản</h3>
-                    <p class="text-slate-600 mb-4">Xử lý mọi dạng khóa: 282, 956, Checkpoint, khóa vĩnh viễn, vô hiệu hóa không rõ nguyên nhân.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Tỷ lệ thành công 99%</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Bảo mật thông tin khách hàng</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Mở Khóa Tài Khoản</h3>
+                    <p class="text-slate-600 leading-relaxed">Xử lý mọi dạng khóa: 282, 956, Checkpoint, khóa vĩnh viễn, vô hiệu hóa không rõ nguyên nhân.</p>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                <div class="service-card p-10 rounded-3xl border border-slate-100 bg-slate-50" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
                         <i data-lucide="badge-check" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Dịch Vụ Tích Xanh</h3>
-                    <p class="text-slate-600 mb-4">Hỗ trợ lên tích xanh cho Profile và Fanpage. Tăng uy tín cá nhân và thương hiệu trên nền tảng.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Quy trình chuẩn quốc tế</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Support 24/7</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Dịch Vụ Tích Xanh</h3>
+                    <p class="text-slate-600 leading-relaxed">Hỗ trợ lên tích xanh cho Profile và Fanpage. Tăng uy tín cá nhân và thương hiệu trên nền tảng.</p>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                <div class="service-card p-10 rounded-3xl border border-slate-100 bg-slate-50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
                         <i data-lucide="trending-up" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Tăng Tương Tác</h3>
-                    <p class="text-slate-600 mb-4">Tăng Like, Share, Follow, View thật. Giúp bài viết tiếp cận khách hàng tiềm năng tốt hơn.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Người dùng thật 100%</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Không tụt, bảo hành vĩnh viễn</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Tăng Tương Tác</h3>
+                    <p class="text-slate-600 leading-relaxed">Tăng Like, Share, Follow, View thật. Giúp bài viết tiếp cận khách hàng tiềm năng tốt hơn.</p>
                 </div>
-
-                <!-- Service 4 -->
-                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                <div class="service-card p-10 rounded-3xl border border-slate-100 bg-slate-50" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
                         <i data-lucide="megaphone" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Quảng Cáo (Ads)</h3>
-                    <p class="text-slate-600 mb-4">Tối ưu hóa ngân sách, Target chuẩn tệp khách hàng. Đột phá doanh thu bền vững.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Chống die tài khoản ads</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Báo cáo chi tiết hàng tuần</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Quảng Cáo (Ads)</h3>
+                    <p class="text-slate-600 leading-relaxed">Tối ưu hóa ngân sách, Target chuẩn tệp khách hàng. Đột phá doanh thu bền vững và an toàn.</p>
                 </div>
-
-                <!-- Service 5 -->
-                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                <div class="service-card p-10 rounded-3xl border border-slate-100 bg-slate-50" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
                         <i data-lucide="shield-check" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Bảo Mật & Chống Rip</h3>
-                    <p class="text-slate-600 mb-4">Bảo vệ tài khoản chống lại các cuộc tấn công, Report bẩn từ đối thủ cạnh tranh.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Cài đặt bảo mật 3 lớp</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Hỗ trợ lấy lại khi bị hack</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Bảo Mật Tài Khoản</h3>
+                    <p class="text-slate-600 leading-relaxed">Cài đặt bảo mật chống Hack, chống Rip. Đảm bảo an toàn tuyệt đối cho tài khoản kinh doanh.</p>
                 </div>
-
-                <!-- Service 6 -->
-                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                <div class="service-card p-10 rounded-3xl border border-slate-100 bg-slate-50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-100">
                         <i data-lucide="database" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Cung Cấp Tài Nguyên</h3>
-                    <p class="text-slate-600 mb-4">Cung cấp Via, Clone, BM (Business Manager) cổ, kháng sẵn để chạy quảng cáo.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Đa dạng quốc gia (Việt, Mỹ, Phi)</li>
-                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Giá cả cạnh tranh nhất</li>
-                    </ul>
+                    <h3 class="text-2xl font-bold mb-4">Cung Cấp Nguyên Liệu</h3>
+                    <p class="text-slate-600 leading-relaxed">Cung cấp Via, Clone, BM chất lượng cao để chạy quảng cáo mượt mà, không bị gián đoạn.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- Detailed Personal Intro -->
     <section id="about" class="py-24 bg-slate-900 text-white overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-8">Tại sao nên chọn <br><span class="text-blue-500">Nguyễn Mạnh Hiếu?</span></h2>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-500">
-                                <i data-lucide="clock" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-1">8 Năm Thực Chiến</h4>
-                                <p class="text-slate-400">Không chỉ là lý thuyết, chúng tôi đã xử lý hàng vạn ca khó từ năm 2016 đến nay.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-500">
-                                <i data-lucide="zap" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-1">Xử Lý Tốc Độ</h4>
-                                <p class="text-slate-400">Thời gian là tiền bạc. Đa số các yêu cầu được xử lý ngay trong ngày.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-500">
-                                <i data-lucide="lock" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-1">Tuyệt Đối Bảo Mật</h4>
-                                <p class="text-slate-400">Chúng tôi cam kết không tiết lộ bất kỳ thông tin cá nhân nào của khách hàng.</p>
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative order-2 lg:order-1" data-aos="fade-right">
+                    <div class="profile-image-container float-animation">
+                        <!-- Updated: Removed 'grayscale' class to show original color image -->
+                        <img src="https://cover-talk.zadn.vn/1/6/0/9/6/a7f7e54826f067b484a1629a1fa1a794.jpg" 
+                             alt="Nguyễn Mạnh Hiếu" 
+                             class="rounded-[3rem] w-full aspect-[4/5] object-cover shadow-2xl transition-all duration-700">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-10 -left-10 bg-blue-600 p-6 rounded-3xl shadow-2xl border border-blue-400/30 backdrop-blur-sm hidden md:block">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-white/20 p-3 rounded-xl">
+                                    <i data-lucide="check-check" class="text-white w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase tracking-widest font-bold text-blue-100">Chuyên gia</p>
+                                    <p class="text-lg font-black text-white">ĐÃ XÁC MINH</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="absolute -top-20 -left-20 w-64 h-64 bg-blue-500 blur-[150px] opacity-20"></div>
                 </div>
-                <div class="relative">
-                    <div class="aspect-square rounded-3xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center p-8">
-                        <!-- Placeholder for a professional photo or complex SVG -->
-                        <div class="text-center">
-                            <i data-lucide="award" class="w-32 h-32 text-blue-500 mx-auto mb-6 opacity-50"></i>
-                            <div class="text-2xl font-bold">Chuyên Gia Uy Tín</div>
-                            <p class="text-slate-400">Đã được xác minh bởi cộng đồng MMO Việt Nam</p>
+
+                <div class="order-1 lg:order-2" data-aos="fade-left">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Nguyễn Mạnh Hiếu <br><span class="text-blue-500">Kỹ sư Công nghệ thông tin</span></h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Tốt nghiệp chuyên ngành CNTT tại **Đại học Đà Nẵng**, tôi không chỉ giải quyết các vấn đề bằng kinh nghiệm mà còn bằng tư duy lập trình và sự am hiểu sâu sắc về thuật toán lõi của mạng xã hội. Với hơn 8 năm thực chiến, tôi tự hào là đối tác tin cậy của hơn 500 doanh nghiệp và hàng ngàn cá nhân có tầm ảnh hưởng tại Việt Nam.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 mb-10">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="award" class="text-blue-500 w-5 h-5"></i>
+                            <span class="text-slate-300 font-medium">Verified MMO Provider</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="users" class="text-blue-500 w-5 h-5"></i>
+                            <span class="text-slate-300 font-medium">Support 500+ KOLs/Celebs</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="shield-check" class="text-blue-500 w-5 h-5"></i>
+                            <span class="text-slate-300 font-medium">Bảo mật thông tin 100%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="code-2" class="text-blue-500 w-5 h-5"></i>
+                            <span class="text-slate-300 font-medium">ICT University Expert</span>
                         </div>
                     </div>
-                    <!-- Decorative elements -->
-                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-500 blur-[100px] opacity-20"></div>
+
+                    <div class="space-y-4 border-l-2 border-blue-600 pl-6 py-2">
+                        <p class="text-slate-300 font-semibold italic">"Triết lý làm việc của tôi là: Chất lượng tạo niềm tin. Mọi vấn đề của khách hàng đều được xử lý với trách nhiệm cao nhất như chính vấn đề của mình."</p>
+                        <p class="text-blue-500 font-bold uppercase tracking-widest text-sm">— Nguyễn Mạnh Hiếu</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Khách Hàng Nói Gì?</h2>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Khách Hàng Nói Gì?</h2>
+                <p class="text-slate-500 text-lg">Sự hài lòng của bạn là thành công lớn nhất của chúng tôi.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-2xl border border-slate-100 italic text-slate-600">
-                    "Tài khoản bị khóa 282 treo 3 tháng, qua tay anh Hiếu chỉ 2 tiếng là về. Thực sự rất uy tín!"
-                    <div class="mt-4 not-italic font-bold text-slate-900">- Hoàng Anh, Chủ Shop Online</div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Updated: Showing all 6 feedbacks -->
+                <div class="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:border-blue-200 transition-all" data-aos="zoom-in">
+                    <div class="flex text-yellow-400 mb-6">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"Tài khoản bị khóa tưởng chừng vô vọng nhưng qua tay anh Hiếu chỉ sau 1 đêm đã về lại bình thường. Rất cảm ơn anh!"</p>
+                    <div class="font-bold text-slate-900 border-t border-slate-50 pt-4">- Chị Mai Anh (Kinh doanh Mỹ phẩm)</div>
                 </div>
-                <div class="p-6 rounded-2xl border border-slate-100 italic text-slate-600">
-                    "Chạy Ads trầy trật mãi không ra đơn, nhờ team Hiếu tối ưu mà doanh thu tháng này x3. Cảm ơn nhiều!"
-                    <div class="mt-4 not-italic font-bold text-slate-900">- CEO Minh Tuấn, Agency</div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:border-blue-200 transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex text-yellow-400 mb-6">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"Hợp tác chạy Ads với Hiếu giúp doanh thu bên mình tăng vọt. Kỹ thuật lên camp rất chắc chắn và tối ưu ngân sách tốt."</p>
+                    <div class="font-bold text-slate-900 border-t border-slate-50 pt-4">- Anh Tuấn (CEO Agency)</div>
                 </div>
-                <div class="p-6 rounded-2xl border border-slate-100 italic text-slate-600">
-                    "Dịch vụ tích xanh rất chuyên nghiệp, tư vấn tận tình từ khâu chuẩn bị giấy tờ. Rất đáng đồng tiền."
-                    <div class="mt-4 not-italic font-bold text-slate-900">- Kols Thanh Hương</div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:border-blue-200 transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex text-yellow-400 mb-6">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"Dịch vụ tích xanh nhanh gọn, uy tín. Không cần phải lo lắng gì khi gửi gắm tài khoản cho team Nguyễn Mạnh Hiếu."</p>
+                    <div class="font-bold text-slate-900 border-t border-slate-50 pt-4">- TikToker Linh Ngọc</div>
+                </div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:border-blue-200 transition-all" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flex text-yellow-400 mb-6">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"Page 50k sub của mình bị hack, may nhờ anh Hiếu xử lý kịp thời lấy lại được. Rất uy tín và chuyên nghiệp."</p>
+                    <div class="font-bold text-slate-900 border-t border-slate-50 pt-4">- Anh Quốc (Chủ Shop Đồng Hồ)</div>
+                </div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:border-blue-200 transition-all" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flex text-yellow-400 mb-6">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"Làm việc cực kỳ chuyên nghiệp và sòng phẳng. Các giải pháp bảo mật rất hiệu quả cho dàn tài khoản của mình."</p>
+                    <div class="font-bold text-slate-900 border-t border-slate-50 pt-4">- Chị Thảo (KOL - Diễn viên)</div>
+                </div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-white shadow-sm hover:border-blue-200 transition-all" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="flex text-yellow-400 mb-6">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i><i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-8 leading-relaxed">"Từ lúc nhờ Hiếu chạy Ads, khách nhắn tin hỏi đất đều đặn mỗi ngày. Chi phí trên mỗi tin nhắn rẻ bất ngờ."</p>
+                    <div class="font-bold text-slate-900 border-t border-slate-50 pt-4">- Anh Dũng (Bất Động Sản)</div>
                 </div>
             </div>
         </div>
@@ -256,107 +327,99 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                <div class="bg-blue-600 p-12 text-white md:w-2/5">
-                    <h2 class="text-3xl font-bold mb-6">Kết Nối Ngay</h2>
-                    <p class="mb-8 opacity-80">Đừng ngần ngại liên hệ với tôi để nhận được sự tư vấn tốt nhất cho vấn đề của bạn.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="phone" class="w-6 h-6"></i>
-                            <span>09xx.xxx.xxx</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
-                            <span>contact@hieunguyen.vn</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="map-pin" class="w-6 h-6"></i>
-                            <span>Hà Nội / TP. Hồ Chí Minh</span>
-                        </div>
-                    </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter text-slate-900">Kết Nối Với Tôi</h2>
+                
+                <div class="mt-8 mb-16 bg-blue-600 text-white p-10 rounded-[3rem] shadow-2xl shadow-blue-300 inline-block w-full max-w-4xl transform hover:scale-[1.02] transition-transform">
+                    <p class="text-blue-100 text-lg font-bold uppercase tracking-[0.3em] mb-4">GỌI NGAY CHO HIẾU</p>
+                    <a href="tel:0986183017" class="text-5xl md:text-8xl font-black tracking-tighter hotline-glow block">098.618.3017</a>
+                    <p class="mt-6 text-blue-100 font-medium">Kỹ sư ICT - ĐH Đà Nẵng | Xử lý ngay lập tức 24/7</p>
+                </div>
 
-                    <div class="flex gap-4 mt-12">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i data-lucide="facebook"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i data-lucide="send"></i></a>
+                <p class="text-slate-500 max-w-2xl mx-auto text-xl font-medium">
+                    Hoặc chọn nền tảng mạng xã hội bên dưới để trao đổi chi tiết hơn.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Zalo Card -->
+                <a href="http://zalo.me/0986183017" target="_blank" data-aos="fade-up" data-aos-delay="100" class="contact-link-card group relative bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 btn-zalo rounded-3xl flex items-center justify-center text-white mb-8 shadow-xl shadow-blue-200 transform group-hover:rotate-6 transition-all">
+                        <span class="font-black text-2xl uppercase">Zalo</span>
                     </div>
-                </div>
-                <div class="p-12 md:w-3/5">
-                    <form id="contactForm" class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="space-y-2">
-                                <label class="text-sm font-semibold">Họ và Tên</label>
-                                <input type="text" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-sm font-semibold">Số điện thoại</label>
-                                <input type="text" placeholder="09xxx..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
-                            </div>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-sm font-semibold">Dịch vụ quan tâm</label>
-                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
-                                <option>Mở khóa tài khoản</option>
-                                <option>Lên tích xanh</option>
-                                <option>Tăng tương tác</option>
-                                <option>Chạy quảng cáo</option>
-                                <option>Khác</option>
-                            </select>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-sm font-semibold">Mô tả tình trạng</label>
-                            <textarea rows="4" placeholder="Ví dụ: Tài khoản bị khóa 956 từ hôm qua..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition">Gửi yêu cầu ngay</button>
-                    </form>
-                </div>
+                    <h3 class="text-3xl font-black mb-2 uppercase tracking-tight">Zalo</h3>
+                    <p class="text-slate-500 mb-8 text-sm font-medium">Nhắn tin trực tiếp qua Hotline 098.618.3017.</p>
+                    <span class="px-10 py-4 bg-blue-50 text-blue-600 rounded-2xl font-black uppercase text-sm group-hover:bg-blue-600 group-hover:text-white transition-all tracking-widest">Chat Zalo</span>
+                </a>
+
+                <!-- Messenger Card -->
+                <a href="https://www.facebook.com/nguyen.manh.hieu.739013" target="_blank" data-aos="fade-up" data-aos-delay="200" class="contact-link-card group relative bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 btn-messenger rounded-3xl flex items-center justify-center text-white mb-8 shadow-xl shadow-purple-200 transform group-hover:rotate-6 transition-all">
+                        <i data-lucide="facebook" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2 uppercase tracking-tight">Facebook</h3>
+                    <p class="text-slate-500 mb-8 text-sm font-medium">Kết nối trực tiếp qua trang cá nhân chính chủ.</p>
+                    <span class="px-10 py-4 bg-purple-50 text-purple-600 rounded-2xl font-black uppercase text-sm group-hover:bg-purple-600 group-hover:text-white transition-all tracking-widest">Nhắn Tin</span>
+                </a>
+
+                <!-- Telegram Card -->
+                <a href="https://web.telegram.org/k/#5559954758" target="_blank" data-aos="fade-up" data-aos-delay="300" class="contact-link-card group relative bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 btn-telegram rounded-3xl flex items-center justify-center text-white mb-8 shadow-xl shadow-sky-200 transform group-hover:rotate-6 transition-all">
+                        <i data-lucide="send" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2 uppercase tracking-tight">Telegram</h3>
+                    <p class="text-slate-500 mb-8 text-sm font-medium">Kênh trao đổi bảo mật cao cho công việc chuyên sâu.</p>
+                    <span class="px-10 py-4 bg-sky-50 text-sky-600 rounded-2xl font-black uppercase text-sm group-hover:bg-sky-600 group-hover:text-white transition-all tracking-widest">Kết Nối</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-white border-t border-slate-100 text-center">
+    <footer class="py-16 bg-white border-t border-slate-100 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-2xl font-bold gradient-text mb-4">Hieu Nguyen Portfolio.</div>
-            <p class="text-slate-500 text-sm mb-6">© 2024 Nguyễn Mạnh Hiếu. Tất cả quyền được bảo lưu.</p>
-            <div class="flex justify-center gap-6 text-sm text-slate-400">
-                <a href="#" class="hover:text-blue-600">Điều khoản dịch vụ</a>
-                <a href="#" class="hover:text-blue-600">Chính sách bảo mật</a>
+            <div class="text-3xl font-black gradient-text mb-4 uppercase tracking-tighter">NGUYEN MANH HIEU.</div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 mb-8">
+                <div class="flex items-center text-slate-900 font-bold text-xl">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2 text-blue-600"></i>
+                    098.618.3017
+                </div>
             </div>
+            <p class="text-slate-400 text-sm">© 2024 Nguyễn Mạnh Hiếu | Kỹ sư CNTT - ĐH Đà Nẵng | Chuyên gia Facebook Solutions.</p>
         </div>
     </footer>
 
-    <!-- Floating Contact Button -->
-    <div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
-        <a href="https://zalo.me/09xxxxxxxx" class="w-14 h-14 bg-blue-500 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300">
-            <span class="font-bold text-xs">Zalo</span>
+    <!-- Fixed Floating Call Button -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <a href="tel:0986183017" class="w-16 h-16 bg-red-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition active:scale-95 group relative animate-bounce">
+            <i data-lucide="phone-call" class="w-8 h-8"></i>
+            <span class="absolute right-full mr-4 bg-red-600 text-white px-4 py-2 rounded-xl text-lg font-black opacity-0 group-hover:opacity-100 transition shadow-xl pointer-events-none whitespace-nowrap">GỌI NGAY: 098.618.3017</span>
         </a>
-        <a href="https://m.me/username" class="w-14 h-14 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300">
-            <i data-lucide="message-circle" class="w-8 h-8"></i>
+        <a href="http://zalo.me/0986183017" target="_blank" class="w-16 h-16 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition active:scale-95 group relative">
+            <span class="font-black text-xs uppercase">Zalo</span>
+            <span class="absolute right-full mr-4 bg-white text-blue-600 border border-blue-100 px-4 py-2 rounded-xl text-lg font-black opacity-0 group-hover:opacity-100 transition shadow-xl pointer-events-none whitespace-nowrap tracking-tight">Zalo: 098.618.3017</span>
         </a>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
 
-        // Form submission handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Trong thực tế sẽ gửi dữ liệu qua API
-            const messageBox = document.createElement('div');
-            messageBox.className = 'fixed top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-8 py-4 rounded-xl shadow-2xl z-[100] transition-opacity duration-500';
-            messageBox.innerText = 'Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ liên hệ lại sớm nhất.';
-            document.body.appendChild(messageBox);
-            
-            this.reset();
-            
-            setTimeout(() => {
-                messageBox.style.opacity = '0';
-                setTimeout(() => messageBox.remove(), 500);
-            }, 3000);
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.remove('py-2');
+            }
         });
     </script>
 </body>
