@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Mạnh Hiếu | Chuyên Gia Giải Pháp Facebook 8 Năm Kinh Nghiệm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(90deg, #1877F2, #00C6FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(24, 119, 242, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(0, 198, 255, 0.05), transparent);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text uppercase tracking-tighter">Hieu Nguyen.</span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-blue-600 transition">Trang chủ</a>
+                    <a href="#services" class="hover:text-blue-600 transition">Dịch vụ</a>
+                    <a href="#about" class="hover:text-blue-600 transition">Kinh nghiệm</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Liên hệ ngay</a>
+                </div>
+                <div class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-50 rounded-full">
+                8+ Năm Kinh Nghiệm Thực Chiến
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Giải Pháp <span class="gradient-text">Facebook Toàn Diện</span> <br>Nâng Tầm Thương Hiệu
+            </h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
+                Chuyên xử lý mọi vấn đề về mạng xã hội: Mở khóa tài khoản, bảo mật, lên tích xanh, tăng tương tác và tối ưu hóa quảng cáo chuyển đổi cao.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200 flex items-center justify-center">
+                    Xem dịch vụ <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center">
+                    Tư vấn miễn phí
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 border-t border-slate-200 pt-12">
+                <div>
+                    <div class="text-4xl font-bold text-slate-900 mb-1">8,000+</div>
+                    <div class="text-slate-500">Khách hàng hài lòng</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-slate-900 mb-1">15k+</div>
+                    <div class="text-slate-500">Tài khoản đã mở khóa</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-slate-900 mb-1">500+</div>
+                    <div class="text-slate-500">Chiến dịch Ads thành công</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-slate-900 mb-1">08</div>
+                    <div class="text-slate-500">Năm kinh nghiệm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Dịch Vụ Chuyên Nghiệp</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Chúng tôi cung cấp các giải pháp kỹ thuật cao giúp bạn duy trì và phát triển sự hiện diện trên Facebook một cách an toàn nhất.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="unlock" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mở Khóa Tài Khoản</h3>
+                    <p class="text-slate-600 mb-4">Xử lý mọi dạng khóa: 282, 956, Checkpoint, khóa vĩnh viễn, vô hiệu hóa không rõ nguyên nhân.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Tỷ lệ thành công 99%</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Bảo mật thông tin khách hàng</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="badge-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dịch Vụ Tích Xanh</h3>
+                    <p class="text-slate-600 mb-4">Hỗ trợ lên tích xanh cho Profile và Fanpage. Tăng uy tín cá nhân và thương hiệu trên nền tảng.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Quy trình chuẩn quốc tế</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Support 24/7</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tăng Tương Tác</h3>
+                    <p class="text-slate-600 mb-4">Tăng Like, Share, Follow, View thật. Giúp bài viết tiếp cận khách hàng tiềm năng tốt hơn.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Người dùng thật 100%</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Không tụt, bảo hành vĩnh viễn</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="megaphone" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quảng Cáo (Ads)</h3>
+                    <p class="text-slate-600 mb-4">Tối ưu hóa ngân sách, Target chuẩn tệp khách hàng. Đột phá doanh thu bền vững.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Chống die tài khoản ads</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Báo cáo chi tiết hàng tuần</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bảo Mật & Chống Rip</h3>
+                    <p class="text-slate-600 mb-4">Bảo vệ tài khoản chống lại các cuộc tấn công, Report bẩn từ đối thủ cạnh tranh.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Cài đặt bảo mật 3 lớp</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Hỗ trợ lấy lại khi bị hack</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card p-8 rounded-2xl border border-slate-100 bg-slate-50 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <i data-lucide="database" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cung Cấp Tài Nguyên</h3>
+                    <p class="text-slate-600 mb-4">Cung cấp Via, Clone, BM (Business Manager) cổ, kháng sẵn để chạy quảng cáo.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Đa dạng quốc gia (Việt, Mỹ, Phi)</li>
+                        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i> Giá cả cạnh tranh nhất</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8">Tại sao nên chọn <br><span class="text-blue-500">Nguyễn Mạnh Hiếu?</span></h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-500">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">8 Năm Thực Chiến</h4>
+                                <p class="text-slate-400">Không chỉ là lý thuyết, chúng tôi đã xử lý hàng vạn ca khó từ năm 2016 đến nay.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-500">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Xử Lý Tốc Độ</h4>
+                                <p class="text-slate-400">Thời gian là tiền bạc. Đa số các yêu cầu được xử lý ngay trong ngày.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-500">
+                                <i data-lucide="lock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-1">Tuyệt Đối Bảo Mật</h4>
+                                <p class="text-slate-400">Chúng tôi cam kết không tiết lộ bất kỳ thông tin cá nhân nào của khách hàng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center p-8">
+                        <!-- Placeholder for a professional photo or complex SVG -->
+                        <div class="text-center">
+                            <i data-lucide="award" class="w-32 h-32 text-blue-500 mx-auto mb-6 opacity-50"></i>
+                            <div class="text-2xl font-bold">Chuyên Gia Uy Tín</div>
+                            <p class="text-slate-400">Đã được xác minh bởi cộng đồng MMO Việt Nam</p>
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-500 blur-[100px] opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Khách Hàng Nói Gì?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl border border-slate-100 italic text-slate-600">
+                    "Tài khoản bị khóa 282 treo 3 tháng, qua tay anh Hiếu chỉ 2 tiếng là về. Thực sự rất uy tín!"
+                    <div class="mt-4 not-italic font-bold text-slate-900">- Hoàng Anh, Chủ Shop Online</div>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-100 italic text-slate-600">
+                    "Chạy Ads trầy trật mãi không ra đơn, nhờ team Hiếu tối ưu mà doanh thu tháng này x3. Cảm ơn nhiều!"
+                    <div class="mt-4 not-italic font-bold text-slate-900">- CEO Minh Tuấn, Agency</div>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-100 italic text-slate-600">
+                    "Dịch vụ tích xanh rất chuyên nghiệp, tư vấn tận tình từ khâu chuẩn bị giấy tờ. Rất đáng đồng tiền."
+                    <div class="mt-4 not-italic font-bold text-slate-900">- Kols Thanh Hương</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="bg-blue-600 p-12 text-white md:w-2/5">
+                    <h2 class="text-3xl font-bold mb-6">Kết Nối Ngay</h2>
+                    <p class="mb-8 opacity-80">Đừng ngần ngại liên hệ với tôi để nhận được sự tư vấn tốt nhất cho vấn đề của bạn.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                            <span>09xx.xxx.xxx</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                            <span>contact@hieunguyen.vn</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            <span>Hà Nội / TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-12">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition"><i data-lucide="send"></i></a>
+                    </div>
+                </div>
+                <div class="p-12 md:w-3/5">
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Họ và Tên</label>
+                                <input type="text" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Số điện thoại</label>
+                                <input type="text" placeholder="09xxx..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold">Dịch vụ quan tâm</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                                <option>Mở khóa tài khoản</option>
+                                <option>Lên tích xanh</option>
+                                <option>Tăng tương tác</option>
+                                <option>Chạy quảng cáo</option>
+                                <option>Khác</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold">Mô tả tình trạng</label>
+                            <textarea rows="4" placeholder="Ví dụ: Tài khoản bị khóa 956 từ hôm qua..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition">Gửi yêu cầu ngay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white border-t border-slate-100 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-2xl font-bold gradient-text mb-4">Hieu Nguyen Portfolio.</div>
+            <p class="text-slate-500 text-sm mb-6">© 2024 Nguyễn Mạnh Hiếu. Tất cả quyền được bảo lưu.</p>
+            <div class="flex justify-center gap-6 text-sm text-slate-400">
+                <a href="#" class="hover:text-blue-600">Điều khoản dịch vụ</a>
+                <a href="#" class="hover:text-blue-600">Chính sách bảo mật</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+        <a href="https://zalo.me/09xxxxxxxx" class="w-14 h-14 bg-blue-500 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300">
+            <span class="font-bold text-xs">Zalo</span>
+        </a>
+        <a href="https://m.me/username" class="w-14 h-14 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300">
+            <i data-lucide="message-circle" class="w-8 h-8"></i>
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Trong thực tế sẽ gửi dữ liệu qua API
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-8 py-4 rounded-xl shadow-2xl z-[100] transition-opacity duration-500';
+            messageBox.innerText = 'Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ liên hệ lại sớm nhất.';
+            document.body.appendChild(messageBox);
+            
+            this.reset();
+            
+            setTimeout(() => {
+                messageBox.style.opacity = '0';
+                setTimeout(() => messageBox.remove(), 500);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
